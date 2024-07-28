@@ -142,7 +142,7 @@ class PerformanceTester {
         status: `Failed - ${error.message}`,
         response: 'N/A'
       };
-
+      console.log(`Request ${requestId} - Response Failed at: ${error.message}`);
       await this.logToCsv(logData);
       this.completedRequests++;
 

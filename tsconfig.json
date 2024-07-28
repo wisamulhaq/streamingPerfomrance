@@ -9,9 +9,10 @@
       "module": "CommonJS",
       "declaration": true,
       "isolatedModules": true,
-      "noEmit": true,
-      "outDir": "dist"
+      "noEmit":false,
+      "outDir": "./dist",
+      
   },
-  "include": ["src"],
+  "include": ["./src"],
   "exclude": ["node_modules"]
 }
