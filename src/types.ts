@@ -1,8 +1,8 @@
-export interface StreamAPIPerformanceConfig {
-    method: 'post' | 'get' | 'put' | 'delete' | 'patch'; // Only allow these HTTP methods
-    maxBodyLength?: number; // Optional
-    url: string; // Mandatory
-    headers: Record<string, string>; // Allow any key-value pairs for headers
-    payload?:  any; // Allow any key-value pairs for headers
-  }
-  
+// types.ts
+export interface StreamAPIPerformanceConfig  {
+  method: string;
+  maxBodyLength?: number;
+  url: string;
+  headers: Record<string, string>;
+  payload?: any;
+};

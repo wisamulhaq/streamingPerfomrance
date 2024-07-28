@@ -4,3 +4,4 @@ test
 *.ts
 *.md
 !.npmignore
+tsconfig.json

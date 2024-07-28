@@ -3,7 +3,8 @@ import { promisify } from 'util';
 import * as fs from 'fs';
 import * as readline from 'readline';
 import { StreamAPIPerformanceConfig } from './types';
-export type {StreamAPIPerformanceConfig} from './types'
+export type { StreamAPIPerformanceConfig } from './types';
+
 const writeFile = promisify(fs.writeFile);
 const appendFile = promisify(fs.appendFile);
 
@@ -14,10 +15,24 @@ class StreamAPIPerformance {
   private completedRequests: number;
   private totalRequests: number;
 
-
   constructor(logFilePath: string, summaryFilePath: string, config: StreamAPIPerformanceConfig) {
     this.logFilePath = logFilePath;
     this.summaryFilePath = summaryFilePath;
+
+    if (!['post', 'get', 'put', 'delete', 'patch'].includes(config.method)) {
+      throw new Error("The 'method' field must be one of 'post', 'get', 'put', 'delete', 'patch'.");
+    }
+    
+    if (!config.url) {
+      throw new Error("The 'url' field is mandatory in the configuration.");
+    }
+
+    if (!config.headers) {
+      throw new Error("The 'headers' field is mandatory in the configuration.");
+    }
+
+ 
+
     this.config = config;
     this.completedRequests = 0;
     this.totalRequests = 0;
@@ -48,7 +63,6 @@ class StreamAPIPerformance {
 
     for await (const line of rl) {
       if (line.startsWith('Request ID')) continue; // Skip header
-
       const [requestId, timeSent, timeToFirstChunk, totalTime, status, response] = line.split(',');
       totalRequests += 1;
       totalFirstChunkTime += timeToFirstChunk !== 'N/A' ? parseFloat(timeToFirstChunk) : 0;

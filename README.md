@@ -18,10 +18,10 @@ npm install streamapiperformance
 ## Usage
 
 ```bash
-import StreamAPIPerformance, {StreamAPIPerformanceConfig} from "streamapiperformance";
+import StreamAPIPerformance from "streamapiperformance";
 
 // Define the configuration for the test
-const config:StreamAPIPerformanceConfig = {
+const StreamAPIPerformanceConfig = {
   method: 'post',
   maxBodyLength: Infinity,
   url: 'https://your-api-endpoint.com/api/v1/responses',
@@ -32,13 +32,20 @@ const config:StreamAPIPerformanceConfig = {
   }
 };
 
-const tester = new PerformanceTester('request_logs.csv', 'summary.csv', config);
+const tester = new StreamAPIPerformance('request_logs.csv', 'summary.csv', StreamAPIPerformanceConfig);
 
 // Execute concurrent requests
 tester.executeConcurrentRequests(750, 30); 
 // This will send 750 requests in 30 minute. Meaning all 750 requests will be scattered over the interval of 30 min. If you want to send all request at the same time set minute paramter as 0
 
 ```
+## StreamAPIPerformanceConfig Configuration
+
+- **`method`**: The HTTP method to use. Must be one of `'post' | 'get' | 'put' | 'delete' | 'patch'`. **(Required)**
+- **`url`**: The URL for the streaming API. **(Required)**
+- **`headers`**: Headers to include in the request. **(Required)**
+- **`maxBodyLength`**: Optional. Maximum size of the request body in bytes.
+- **`payload`**: Optional. The body of the request.
 
 ## Reporting
 After the test execution, a summary report will be generated in the specified summary file path, providing the following details:
