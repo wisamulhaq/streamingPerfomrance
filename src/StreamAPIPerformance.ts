@@ -3,7 +3,7 @@ import { promisify } from 'util';
 import * as fs from 'fs';
 import * as readline from 'readline';
 import { StreamAPIPerformanceConfig } from './types';
-
+export type {StreamAPIPerformanceConfig} from './types'
 const writeFile = promisify(fs.writeFile);
 const appendFile = promisify(fs.appendFile);
 

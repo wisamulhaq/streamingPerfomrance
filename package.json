@@ -1,6 +1,6 @@
 {
   "name": "streamapiperformance",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "To evaluate the performance of a streaming api",
   "main": "./dist/index.js",
   "module": "./dist/idex.mjs",
