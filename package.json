@@ -1,5 +1,5 @@
 {
-  "name": "streamingperfomrance",
+  "name": "streamingperformance",
   "version": "1.0.0",
   "description": "To evaluate the performance of a streaming api",
   "main": "./dist/index.js",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wisamulhaq/streamingPerfomrance.git"
+    "url": "https://github.com/wisamulhaq/streamingPerformance.git"
   },
   "bugs": {
-    "url": "  https://github.com/wisamulhaq/streamingPerfomrance/issues"
+    "url": "https://github.com/wisamulhaq/streamingPerformance/issues"
   },
   "keywords": [
     "performance",
