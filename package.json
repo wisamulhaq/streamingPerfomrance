@@ -8,6 +8,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wisamulhaq/streamingPerfomrance.git"
+  },
+  "bugs": {
+    "url": "  https://github.com/wisamulhaq/streamingPerfomrance/issues"
+  },
+  "keywords": [
+    "performance",
+    "testing",
+    "streaming",
+    "api"
+  ],
   "author": "Wisamul Haque",
   "license": "MIT",
   "devDependencies": {

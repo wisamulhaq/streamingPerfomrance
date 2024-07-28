@@ -80,7 +80,7 @@ class PerformanceTester {
       let data = '';
       let firstChunkTime: any = null;
       response.data.on('data', (chunk: any) => {
-        if (firstChunkTime === null && JSON.parse(chunk.toString('UTF-8')).data.length !== 0) {
+        if (firstChunkTime === null) {
           firstChunkTime = new Date().getTime();
           const timeToFirstChunk = (firstChunkTime - startTime) / 1000;
           console.log(`Request ${requestId} - First chunk received at: ${firstChunkTime}`);
