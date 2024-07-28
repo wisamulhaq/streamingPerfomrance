@@ -3,6 +3,7 @@ import { promisify } from 'util';
 import * as fs from 'fs';
 import * as readline from 'readline';
 import { PerformanceTesterConfig } from './types';
+export type { PerformanceTesterConfig } from './types';
 
 const writeFile = promisify(fs.writeFile);
 const appendFile = promisify(fs.appendFile);
@@ -13,6 +14,7 @@ class PerformanceTester {
   private summaryFilePath: string;
   private completedRequests: number;
   private totalRequests: number;
+
 
   constructor(logFilePath: string, summaryFilePath: string, config: PerformanceTesterConfig) {
     this.logFilePath = logFilePath;
