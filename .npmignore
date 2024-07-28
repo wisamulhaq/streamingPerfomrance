@@ -1,30 +1,6 @@
-# Source files
-src/
-
-# Tests
-test/
-__tests__/
-*.spec.ts
-*.test.ts
-
-# Configuration files
-tsconfig.json
-tsconfig.build.json
-
-# Local environment files
-.env
-
-# Documentation
-README.md
-
-# Git-related files
-.git/
-.gitignore
-
-# Build artifacts
-node_modules/
-dist/
-
-# Other
-.vscode/
-.idea/
+src
+node_modules
+test
+*.ts
+*.md
+!.npmignore

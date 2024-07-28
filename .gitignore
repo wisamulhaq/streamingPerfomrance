@@ -1,25 +1,2 @@
-# Node.js dependencies
-node_modules/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Compiled output
-dist/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Other
-.env
+node_modules
+dist
