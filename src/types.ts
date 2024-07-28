@@ -1,4 +1,4 @@
-export interface PerformanceTesterConfig {
+export interface StreamAPIPerformanceConfig {
     method: 'post' | 'get' | 'put' | 'delete' | 'patch'; // Only allow these HTTP methods
     maxBodyLength?: number; // Optional
     url: string; // Mandatory

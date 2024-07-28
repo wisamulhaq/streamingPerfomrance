@@ -1,3 +1,3 @@
-import PerformanceTester from './PerformanceTester';
+import StreamAPIPerformance from './StreamAPIPerformance';
 
-export default PerformanceTester;
+export default StreamAPIPerformance;

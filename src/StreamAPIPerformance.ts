@@ -2,21 +2,21 @@ import axios from 'axios';
 import { promisify } from 'util';
 import * as fs from 'fs';
 import * as readline from 'readline';
-import { PerformanceTesterConfig } from './types';
-export type { PerformanceTesterConfig } from './types';
+import { StreamAPIPerformanceConfig } from './types';
+export type { StreamAPIPerformanceConfig } from './types';
 
 const writeFile = promisify(fs.writeFile);
 const appendFile = promisify(fs.appendFile);
 
-class PerformanceTester {
-  private config: PerformanceTesterConfig;
+class StreamAPIPerformance {
+  private config: StreamAPIPerformanceConfig;
   private logFilePath: string;
   private summaryFilePath: string;
   private completedRequests: number;
   private totalRequests: number;
 
 
-  constructor(logFilePath: string, summaryFilePath: string, config: PerformanceTesterConfig) {
+  constructor(logFilePath: string, summaryFilePath: string, config: StreamAPIPerformanceConfig) {
     this.logFilePath = logFilePath;
     this.summaryFilePath = summaryFilePath;
     this.config = config;
@@ -177,4 +177,4 @@ class PerformanceTester {
   }
 }
 
-export default PerformanceTester;
+export default StreamAPIPerformance;

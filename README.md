@@ -1,27 +1,27 @@
-# Streaming Performance
+# Stream API Performance
 
 A performance testing tool for streaming APIs. This package allows you to perform concurrent requests to a specified API endpoint or send requests in a scattered format over a given span of time, log the results, and generate summary statistics, including average first chunk response time, average completion time, failure and success.
 
 ## Description
 
-The Performance Tester package is designed to help developers test the performance of their streaming APIs. It allows for configurable concurrent requests, logs detailed metrics for each request, and provides summary statistics once the test is complete. 
+The Stream API Performance package is designed to help developers test the performance of their streaming APIs. It allows for configurable concurrent requests, logs detailed metrics for each request, and provides summary statistics once the test is complete. 
 
 ## Installation
 
 To install the package, use the following command:
 
 ```sh
-npm install streamingperformance
+npm install streamapiperformance
 
 ```
 
 ## Usage
 
 ```bash
-import PerformanceTester from 'streamingperformance';
+import StreamAPIPerformance, {StreamAPIPerformanceConfig} from "streamapiperformance";
 
 // Define the configuration for the test
-const config = {
+const config:StreamAPIPerformanceConfig = {
   method: 'post',
   maxBodyLength: Infinity,
   url: 'https://your-api-endpoint.com/api/v1/responses',

@@ -1,5 +1,5 @@
 {
-  "name": "streamingperformance",
+  "name": "streamapiperformance",
   "version": "1.0.0",
   "description": "To evaluate the performance of a streaming api",
   "main": "./dist/index.js",
